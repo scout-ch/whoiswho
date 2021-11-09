@@ -1,0 +1,11 @@
+body a {
+	color:#521d3a;
+	font-weight: bold;
+}
+
+#backNav {
+	position:absolute;
+	color:#521d3a;
+	padding: 1.2em;
+	z-index:2;
+}
