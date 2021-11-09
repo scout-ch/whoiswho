@@ -9,7 +9,6 @@ class NodesController {
     let lead_roles = this.findLeadRoles(result.linked.roles);
     let people_new = [];
 
-    // Create root element
     people_new.push({
       id: 1,
       Name: root_name,
@@ -29,10 +28,9 @@ class NodesController {
         img_url: people[i].picture
       };
 
-      // Check if person has role "Leiter*in"
       if(lead_roles.includes(people[i].links.roles[0])) {
         person.Meta = this.leadRoleMetaInfo;
-        people_new.unshift(person); // append to the beginning of the array
+        people_new.unshift(person);
       }
       else {
         people_new.push(person);
@@ -50,6 +48,7 @@ class NodesController {
     }
     return lead_roles;
   }
+
 }
 
 Array.prototype.move = function (from, to) {
